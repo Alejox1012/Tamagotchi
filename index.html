@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="selection-screen" id="selection-screen">
+        <h1>Elige tu </h1>
+        <h1>Tamagotchi</h1>
+        <input type="text" id="tamagotchi-name" placeholder="Nombre de tu Tamagotchi">
+        <br>
+        <br>
+        <button class="animal-btn" onclick="selectAnimal('dog')">Perro</button>
+        <button class="animal-btn" onclick="selectAnimal('cat')">Gato</button>
+        <button class="animal-btn" onclick="selectAnimal('chicken')">Gallina</button>
+    </div>
+    <div class="tamagotchi" id="tamagotchi">
+        <h1 id="tamagotchi-title">  Tamagotchi</h1>
+        <div class="image-container">
+            <div id="animal-image"></div>
+            <div id="action-image" class="action-image"></div>
+        </div>
+        <div id="action-text" class="action-text"></div>
+        <p id="time-elapsed">Tiempo transcurrido: 0s</p>
+        <div id="warning-text"></div>
+        <div class="status">
+            <div class="need">
+                <label>Alimentación: </label>
+                <progress id="hunger" value="100" max="100"></progress>
+            </div>
+            <div class="need">
+                <label>Diversión: </label>
+                <progress id="fun" value="100" max="100"></progress>
+            </div>
+            <div class="need">
+                <label>Sueño: </label>
+                <progress id="sleep" value="100" max="100"></progress>
+            </div>
+        </div>
+        <div class="controls">
+            <button onclick="feed()">Alimentar</button>
+            <button onclick="play()">Jugar</button>
+            <button onclick="rest()">Dormir</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
